@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Datatype in JacvaScript</title>
+
+
+    <style>
+        /* here we can write css */
+        h4[data-dev="demo3"] {
+            background-color: red;
+            width: 50%;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            border-radius: 20px;
+            font-size: 2em;
+
+        }
+    </style>
+    <script>
+        // herer we can write jS code
+    </script>
+</head>
+
+<body>
+    <h1 id="demo1"> </h1>
+    <p class="demo2"></p>
+    <h4 data-dev="demo3"></h4>
+    <p class="demo4"></p>
+    <script src="./js/script.js"></script>
+    <script>
+        //let takes an array
+        //Syntax of an Array--
+        //let arrayName = [element1,element2,element3.....]
+        //let arrayName = [item1,item2,item3..............]
+        let students = ['Devanand_Verma', "Paras", `Abhishek`, "Aditya"]
+
+        //let access the index of an array
+        //Method 1 to display/log JS output
+        console.log("Hello" + ' ' + students[0]); /// here i've used concatenation operator
+        console.log(`Hi` + ' ' + students[2]);// here i've used concatenation operator
+
+        //lets display complete array
+        console.log(students);
+
+        /// see the output by other method
+        //  2. alert()
+        //alert(students[3]);
+
+        //this is 3rd method to see or display the output 
+        document.getElementById("demo1").innerHTML = students;
+
+        // querySelector Method to see the output of an array
+        document.querySelector('p.demo2').innerHTML = 'Hello' + " " + students[2];
+
+        //let's use query selector method and use of custom attribute...
+        document.querySelector('h4[data-dev = "demo3"]').innerHTML = "I am" + " " + students[0]
+
+        //let's use 4th method to log/display the JS output
+        document.write('<div>' + 'Hello I am ' + students[2] + '</div>')
+
+
+
+
+
+        // let's create a news using object containing Array
+
+        let news1 = [
+            {
+                n1h1: "Sultanpuri accident: We want justice for Anjali, says one suspect’s family.",
+                n1p1: "Mukesh, brother of accused Krishan, said none of the family members has stepped out since Krishan’s arrest, and have been getting information about the case through news on TV"
+            },
+            {
+                n2h2: "Number Theory: Four key questions that will matter for the economy in 2023",
+                n2p2: "As the New Year begins amid renewed hope, what will 2023 hold for the economy — both Indian and global? Here are four questions whose answers hold the key."
+            }
+        ]
+        //This is the 1st method to log/display of an Object
+        //console.log(news1[0]);
+
+        //This is 2nd way to log/display the JS code
+        let x = document.querySelector('p.demo4')
+        //this is 1st way to access the objects element
+        x.innerHTML = news1[0].n1h1;
+
+        //this is 2nd way to access the objects element
+        x.innerHTML = news1[0]["n1p1"];
+
+        //this is 3rd way to access the objects element
+        var y = news1[1].n2p2;
+        x.innerHTML = y;
+    </script>
+
+</body>
+
+</html>
